@@ -12,7 +12,7 @@ if ($dbconection) {
             echo "<td>" . htmlspecialchars($row['car_id']) . "</td>";
             echo "<td>" . htmlspecialchars($row['make']) . "</td>";
             echo "<td>" . htmlspecialchars($row['model']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['year']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['yom']) . "</td>";
             echo "</tr>";
         }
         echo "</table>";
@@ -23,4 +23,3 @@ if ($dbconection) {
 } else {
     die("Database connection failed: " . mysqli_connect_error());
 }   
-?>

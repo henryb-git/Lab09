@@ -27,4 +27,3 @@ if (isset($_GET['model'])) {
 }
 
 mysqli_close($conn);
-?>
