@@ -1,6 +1,6 @@
 <?php
 require_once 'settings.php';
-$dbconection = @mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$dbconection = @mysqli_connect($host, $username, $password, $database);
 if ($dbconection) {
     $query = "SELECT * FROM cars";
     $result = mysqli_query($dbconection, $query);
