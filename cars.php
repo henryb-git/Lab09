@@ -1,5 +1,7 @@
 <?php
 require_once 'settings.php';
+
+require 'search_form.php';
 $dbconection = @mysqli_connect($host, $username, $password, $database);
 if ($dbconection) {
     $query = "SELECT * FROM cars";

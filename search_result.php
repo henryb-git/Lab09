@@ -2,9 +2,9 @@
 require_once("settings.php");
 
 if (isset($_GET['model'])) {
-    $model = mysqli_real_escape_string($conn, $_GET['model']);
+    $model = mysqli_real_escape_string($dbconnection, $_GET['model']);
     $sql = "SELECT * FROM cars WHERE model LIKE '%$model%'";
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($dbconnection, $sql);
 
     if (mysqli_num_rows($result) > 0) {
         echo "<table border='1' cellpadding='5'>";
@@ -26,4 +26,4 @@ if (isset($_GET['model'])) {
     echo "Please enter a model to search.";
 }
 
-mysqli_close($conn);
+mysqli_close($dbconnection);
